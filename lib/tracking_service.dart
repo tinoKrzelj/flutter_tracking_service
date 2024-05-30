@@ -1,7 +1,6 @@
 library tracking_service;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/domain/tracking_service.dart';
+export 'src/factory/tracking_service_factory.dart';
+export 'src/domain/entity/tracking_service_event.dart';
+export 'src/domain/entity/tracking_service_platform.dart';

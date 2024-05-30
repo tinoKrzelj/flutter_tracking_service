@@ -11,6 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  mocktail: ^1.0.3
+  logger: ^2.3.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
