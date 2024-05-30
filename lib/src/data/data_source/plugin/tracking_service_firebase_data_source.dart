@@ -16,6 +16,6 @@ class TrackingServiceFirebaseDataSource extends TrackingServiceDataSource {
         "TrackingService -> TrackingServiceFirebaseDataSource -> Event with name ${event.name} sent.");
 
     // TODO: Tino implement trackEvent
-    throw UnimplementedError();
+    return Future.value(null);
   }
 }
