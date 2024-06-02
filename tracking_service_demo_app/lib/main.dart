@@ -1,7 +1,10 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tracking_service/tracking_service.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+Future<void> main() async {
   runApp(const MyApp());
 }
 
@@ -15,9 +18,13 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   late TrackingService trackingService = TrackingServiceFactory.create();
 
-  void _testSendEvent() {
+  void _testSendEvent() async {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+
     final event = TrackingEvent(
-      name: "Test Event",
+      name: "test_event",
       attributes: {"arg1": "val1"},
       platforms: [TrackingPlatform.firebase],
     );
@@ -33,7 +40,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 _testSendEvent();
               },
               child: const Text("Send Test Event")),

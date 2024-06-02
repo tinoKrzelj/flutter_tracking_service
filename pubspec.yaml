@@ -14,6 +14,12 @@ dependencies:
   mocktail: ^1.0.3
   logger: ^2.3.0
 
+  # Firebase Dependencies
+
+  firebase_core: ^2.32.0
+  firebase_analytics: ^10.10.7
+#  firebase_database: ^10.5.7
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
